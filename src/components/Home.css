@@ -6,13 +6,15 @@ body{
 .mt-80{
     margin-top: 80px;;
 }
+.mt-40{
+  margin-top: 40px;
+}
 .banner-section{
     margin-top: 3rem;
     margin-bottom:3rem;
     background-color: bisque;
     border-radius: 20px;
     display:flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -307,7 +309,7 @@ font-weight: 500;
 
 /*dashboard home css */
 .dashboard-flex{
-    margin-left: 6%;
+    margin-left: 5.6%;
 }
 .dashboard-whats-new-section{
     box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
@@ -390,6 +392,12 @@ font-weight: 500;
 
 /* respnsive css */
 @media only screen and (max-width: 600px){
+  .banner-section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
     .form-section{
         margin-top: 3rem;
      }

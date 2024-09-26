@@ -1,14 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DashboardHome from '../Admin/DashboardHome';
+import DashboardHome from '../Admin/Home';
 
 const SidebarDashboard = () => {
   return (
     <>
   <div class="area"></div><nav class="main-menu">
             <ul>
-                <li>
+            <li>
                     <Link to="/Dashboard/DashboardHome">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                          Home
+                        </span>
+                    </Link>
+                  
+                </li>
+                <li>
+                    <Link to="/Dashboard/Dashboard">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
                           Dashboard

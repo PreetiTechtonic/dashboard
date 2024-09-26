@@ -1,0 +1,248 @@
+.dashboardcontent{
+    background-color: #80808024;
+}
+.dashboardcontent hr{
+    margin:0px;
+}
+.nav-underline .nav-link{
+    font-size: 14px;
+    color:black;
+}
+.mt-55{
+    margin-top:55px !important;
+}
+.br-10{
+border-radius: 10px;
+}
+.bg{
+    background-color: #a8a8a830;
+}
+.p3{
+    padding:11px;
+}
+.m-l-10{
+    margin-left: 10px;
+}
+.das-content-header{
+    margin-left:10px;
+    font-weight: 600;
+    font-size:16px;
+    gap:3rem;
+}
+.overview-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: "center";
+    align-items: "center";
+    text-align: "center";
+    margin-top: 1rem;
+    line-height: 0.7rem;
+  }
+  
+  .overview-items1, .overview-items2, .overview-item3 {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+  .overview-items1 img,  .overview-items2 img,  .overview-item3 img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .overview-items1 {
+    background-color: rgba(153, 223, 243, 0.457);
+  }
+  
+  .overview-items2 {
+    background-color: rgba(117, 223, 183, 0.306);
+  }
+  
+  .overview-item3 {
+    background-color: rgba(153, 223, 243, 0.457)    ;
+  }
+  .overview-ship-detail{
+    background-color: rgba(153, 223, 243, 0.457);
+    /* height: 200px; */
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+.shipping-head{
+    display: flex;
+    justify-content: space-between;
+    margin:20px;
+}
+.overview-ship-dtails-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.overview-ship-dtails-blocks-items h6{
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    background: white;
+}
+.overview-ship-dtails-blocks-items p{
+font-size: 14px;
+font-weight: 600;
+text-align: center;
+}
+.overview-ship-dtails-blocks-items h6{
+    width:60px;
+ }
+ .highchart-overview{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+ .hightchart-item{
+    background-color: white;
+    border-radius: 20px;
+    margin-top:50px;
+ }
+ .order-table-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters label {
+    margin-right: 10px;
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scroll */
+  }
+  
+  .order-table {
+    width: 100%;
+    min-width: 800px; /* Adjust this to a reasonable value */
+    border-collapse: collapse;
+  }
+  
+  .order-table th, .order-table td {
+    padding: 8px;
+    text-align: left;
+  }
+  .filters input {
+    border-radius: 15px;
+    font-size:12px;
+    padding: 5px;
+  }
+  /* courier-css */
+.couriers-items{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.couriers-items ul li{
+    color:black;
+}
+.couriers-items-row-1{
+    width:30%;
+}
+.courier-items-row-2{
+    display: flex;
+    width:80%;
+    justify-content: space-around;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.couriers-items1, .couriers-items2, .couriers-items3{
+    width:80%;
+}
+.courier-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+.courier-logo-header{
+    height:125px;
+    margin:15px;
+}
+.list-group{
+    margin:0px 15px 0px 15px;
+    font-size:13px;
+}
+.list-group-item:first-child{
+    border-radius: 10px !important;
+}
+.list-group-item+.list-group-item{
+    border-radius: 10px !important;
+}
+.couriers-items-row-1 h5{
+    margin-left: 10px;
+}
+.date-range-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .date-picker-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 150px;
+  }
+  
+  .apply-filter-btn {
+    padding: 8px 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .apply-filter-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+@media screen and (max-width: 600px) {
+    .das-content-header{
+        font-size:10px;
+        font-weight: 600;
+        gap:1rem;
+    }
+    .nav-underline .nav-link{
+        font-size: 10px;
+        color:black;
+    }
+    .overview-items1, .overview-items2, .overview-item3 {
+        display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+        width: 300px;
+        height: 170px;
+        margin-top: 20px;
+        border-radius: 20px;
+      }
+      .overview-ship-dtails-blocks-items{
+        width:33.33%;
+      }
+      .order-table {
+        font-size: 14px; /* Adjust the font size for better mobile readability */
+      }
+      .couriers-items-row-1{
+        width:40%;
+    }
+  }

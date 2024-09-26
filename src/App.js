@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './Dashboardcontent.css';
 import './components/Home.css';
 import './components/Sidebar.css';
 import Dashboard from './Admin/Dashboard';
