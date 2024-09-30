@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SidebarDashboard from '../components/SidebarDashboard';
+import planSeparator from './images/plan-seperator.png';
+import tickImage from './images/tick.png';
 
 const Plan = () => {
+  const [activeSection, setActiveSection] = useState('quarterly');
+  const handleSectionClick = (section) => {
+    setActiveSection(section); // Set the active section on click
+  };
+  const listItems = [
+    'Upto 10 SKU / Hyperlocal Darkstore',
+    'Minimum Guarantee: 200 Orders/Month',
+    'Subscription for 3 Months',
+    'Per Order Cost: ₹ 55',
+    'Stock holding, processing & Management',
+    'Access to Dashboard',
+    'Monthly Reports',
+    'Key Account Management'
+  ];
+ 
+  
+  
   return (
     <>
      <div className='main-dashboard-page-content'>
@@ -33,9 +52,19 @@ const Plan = () => {
 <p>Grow Faster with the shipping plan, that fit your business.</p>
    </div>
    <div className='container plan-interval-row mb-2'>
-<span>Monthly</span><span>Quatarly</span><span>Half Yearly</span><span>Yearly</span>
+   <ul className="interval-list">
+          <li className="interval-item">
+            <button onClick={() => handleSectionClick('quarterly')} className="interval-link">Quarterly</button>
+          </li>
+          <li className="interval-item">
+            <button onClick={() => handleSectionClick('halfyearly')} className="interval-link">Half Yearly</button>
+          </li>
+          <li className="interval-item">
+            <button onClick={() => handleSectionClick('yearly')} className="interval-link">Yearly</button>
+          </li>
+        </ul>
    </div>
-   <div className='container plan-card-section mb-5'>
+   {/* <div className='container plan-card-section mb-5'>
     <div className='plan-box'>
         <div className='plan-box-item text-center mt-2'>
             <div className='top-section-plan'>
@@ -102,8 +131,212 @@ const Plan = () => {
         </div>
         </div>
     </div>
-   </div>
+   </div> */}
+   <div className='container mb-5'>
+   {activeSection === 'quarterly' && (
+  <div className='plans-container' id="quatarly-section">
+    <div className='plan-items'>
+<div className='plan-item1'>
+  <div className='plan-header-item text-center'>
+    <h1 className='text-white'>Starter</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>44,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
 </div>
+<button type="button" class="btn plan-choose-btn1">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item2'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Growth</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>1,29,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn2">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item3'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Enterprise</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>2,09,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn3">Get this plan</button>
+</div>
+  </div>
+   )}
+     {activeSection === 'halfyearly' && (
+  <div className='plans-container' id="Halfyearly-section">
+    <div className='plan-items'>
+<div className='plan-item1'>
+  <div className='plan-header-item text-center'>
+    <h1 className='text-white'>Starter</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>44,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn1">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item2'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Growth</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>1,18,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn2">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item3'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Enterprise</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>1,90,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn3">Get this plan</button>
+</div>
+  </div>
+   )}
+   {activeSection === 'yearly' && (
+  <div className='plans-container' id="yearly-section">
+    <div className='plan-items'>
+<div className='plan-item1'>
+  <div className='plan-header-item text-center'>
+    <h1 className='text-white'>Starter</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>36,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn1">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item2'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Growth</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>1,06,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn2">Get this plan</button>
+</div>
+<div className='plan-items'>
+<div className='plan-item3'>
+<div className='plan-header-item text-center'>
+    <h1 className='text-white'>Enterprise</h1>
+    <p>Pack</p>
+    <img src={planSeparator} alt="Plan Separator" />
+   <h2 className='text-white'><span>&#8377;</span>1,71,000/<span>Month</span></h2>
+  </div>
+  <div className='plan-sub-item'>
+  <ul className="tick-list">
+        {listItems.map((item, index) => (
+          <li key={index} className="tick-list-item">
+            <img src={tickImage} alt="Tick" className="tick-icon" />
+            <span className="list-content">{item}</span>
+          </li>
+        ))}
+      </ul>
+  </div>
+</div>
+<button type="button" class="btn plan-choose-btn3">Get this plan</button>
+</div>
+  </div>
+     )}
+</div>
+</div>
+
     </div> 
     </>
   )
